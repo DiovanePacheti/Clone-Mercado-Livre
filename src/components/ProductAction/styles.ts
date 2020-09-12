@@ -68,24 +68,82 @@ export const InstallmentsInfo = styled.div`
 `;
 export const StockStatus = styled.div`
     margin-top:24px;
-    font-size:;
+    font-size:18px;
 `;
-export const MethodCard = styled.div``;
+export const MethodCard = styled.div`
+margin-top:18px;
+display:flex;
+> div {
+    margin-left:8px;
+    display:flex;
+    flex-direction:column;
+
+    .title{
+        color:var(--color-green);
+        font-size:16px;
+    }
+    .details{
+        color:var(--color-gray);
+        font-size:14px;
+        margin-top:5px;
+    }
+    .more{
+        color:var(--color-green);
+        font-size:14px;
+        font-weight:600;
+        margin-top:5px;
+    }
+}
+`;
+
 export const CheckIcon = styled(HiOutlineCheck)`
     width:24px;
     height:24px;
     color:var(--color-green);
 `;
-export const Actions = styled.div``;
+export const Actions = styled.div`
+    margin-top:16px;
+    display:flex;
+    flex-direction:column;
+
+`;
 
 type ButtonProps = {solid?: boolean};
 
 export const Button = styled.button<ButtonProps>`
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:15px;
+    border-radius:4px;
+    padding:12px 10px;
+    margin-top:10px;
 
+    color:${props => props.solid ? 'var(--color-white)' : 'var(--color-blue)'};
+    background-color:${props => props.solid ? 'var(--color-blue)' : 'transparent'};
+    border:${props => props.solid ? 'none' : '1px solid var(--color-blue)'};
+    cursor:pointer;
+    
 `;
-export const Benefits = styled.div``;
+export const Benefits = styled.ul`
+    margin-top:16px;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+
+    > li{
+        display:flex;
+        
+        p{
+            margin-left:10px;
+            color:var(--color-gray);
+            font-size:14px;
+        }
+    }
+`;
 export const ShieldIcon = styled(HiOutlineShieldCheck)`
     width:24px;
     height:24px;
     color:var(--color-green);
+    flex-shrink:0;
 `;

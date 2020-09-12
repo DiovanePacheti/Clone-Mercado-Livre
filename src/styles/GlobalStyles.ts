@@ -16,6 +16,9 @@ export default createGlobalStyle`
   a{
     text-decoration:none;
   }
+  li{
+    list-style-type: none;
+  }
   *, button, input {
     border: 0;
     background: none;
